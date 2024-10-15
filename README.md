@@ -1,4 +1,8 @@
 # Simulasi Firewall
+| Nama          | NRP          |
+| ------------- | ------------ |
+| Irfan Qobus Salim | 5027221058 |
+| Salomo Raja Exp Lane | 5027231063|
 
 ## Simulasi Firewall dengan ACL:
 
