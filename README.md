@@ -1,4 +1,4 @@
-images/# Simulasi Firewall
+# Simulasi Firewall
 
 ## Simulasi Firewall dengan ACL:
 
