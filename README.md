@@ -195,14 +195,14 @@
 3. Dokumentasi :
    Router 1:
    ![alt text](images/Rt111.jpeg)
-   ![alt text](images/Rt11.2.jpeg)
-   ![alt text](images/Rt12.1.jpeg)
-   ![alt text](images/Rt12.2.jpeg)
+   ![alt text](images/Rt112.jpeg)
+   ![alt text](images/Rt121.jpeg)
+   ![alt text](images/Rt122.jpeg)
 
    Router 2:
-   ![alt text](images/Rt21.1.jpeg)
-   ![alt text](images/Rt21.2.jpeg)
-   ![alt text](images/Rt22.1.jpeg)
-   ![alt text](images/Rt22.2.jpeg)
+   ![alt text](images/Rt211.jpeg)
+   ![alt text](images/Rt212.jpeg)
+   ![alt text](images/Rt221.jpeg)
+   ![alt text](images/Rt222.jpeg)
    
    
