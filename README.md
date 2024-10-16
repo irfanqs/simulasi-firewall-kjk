@@ -194,15 +194,15 @@
 
 3. Dokumentasi :
    Router 1:
-   ![alt text](images/Rt1 1.1.jpeg)
-   ![alt text](images/Rt1 1.2.jpeg)
-   ![alt text](images/Rt1 2.1.jpeg)
-   ![alt text](images/Rt1 2.2.jpeg)
+   ![alt text](images/Rt11.1.jpeg)
+   ![alt text](images/Rt11.2.jpeg)
+   ![alt text](images/Rt12.1.jpeg)
+   ![alt text](images/Rt12.2.jpeg)
 
    Router 2:
-   ![alt text](images/Rt2 1.1.jpeg)
-   ![alt text](images/Rt2 1.2.jpeg)
-   ![alt text](images/Rt2 2.1.jpeg)
-   ![alt text](images/Rt2 2.2.jpeg)
+   ![alt text](images/Rt21.1.jpeg)
+   ![alt text](images/Rt21.2.jpeg)
+   ![alt text](images/Rt22.1.jpeg)
+   ![alt text](images/Rt22.2.jpeg)
    
    
