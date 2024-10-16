@@ -325,11 +325,14 @@
 
 4. Dokumentasi Hasil Percobaan:
 
+   Percobaan 1:
     ![alt text](images/Percobaan1.jpeg)
+
+   Percobaan 2:
     ![alt text](images/Percobaan2.jpeg)
    
 
-5. Kesimpulan
+6. Kesimpulan
 
    **Jitter:**
    Host 1 memiliki jitter yang awalnya kecil, namun meningkat tajam seiring dengan kenaikan bandwidth.
