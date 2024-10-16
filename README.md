@@ -275,6 +275,7 @@
    
 
 5. Kesimpulan
+
    **Jitter:**
    Host 1 memiliki jitter yang awalnya kecil, namun meningkat tajam seiring dengan kenaikan bandwidth.
    Host 2 memiliki jitter yang relatif lebih besar di awal, namun stabil di nilai yang lebih rendah untuk sebagian besar interval.
