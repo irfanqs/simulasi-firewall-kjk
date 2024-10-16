@@ -194,7 +194,7 @@
 
 3. Dokumentasi :
    Router 1:
-   ![alt text](images/Rt11.1.jpeg)
+   ![alt text](images/Rt111.jpeg)
    ![alt text](images/Rt11.2.jpeg)
    ![alt text](images/Rt12.1.jpeg)
    ![alt text](images/Rt12.2.jpeg)
