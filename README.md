@@ -193,6 +193,7 @@
    ```
 
 3. Dokumentasi :
+
    Router 1:
    ![alt text](images/Rt111.jpeg)
    ![alt text](images/Rt112.jpeg)
@@ -204,5 +205,86 @@
    ![alt text](images/Rt212.jpeg)
    ![alt text](images/Rt221.jpeg)
    ![alt text](images/Rt222.jpeg)
+
+
+## Penerapan QoS dan Pemantauan Kinerja:
+**Deskripsi:** Perusahaan Anda ingin memastikan bahwa aplikasi penting mendapatkan bandwidth yang cukup melalui penerapan QoS (Quality of Service).
+
+**Tugas:**
+
+1. Buatlah topologi jaringan di GNS3 dengan beberapa host dan router Cisco.
+2. Konfigurasikan kebijakan QoS untuk memberikan prioritas tinggi pada lalu lintas dari subnet tertentu (misalnya, subnet 192.168.1.0/24).
+3. Gunakan alat pengujian lalu lintas (misalnya, iPerf) untuk mensimulasikan lalu lintas dari subnet yang berbeda.
+4. Dokumentasikan pengaruh QoS terhadap kinerja lalu lintas yang diuji. Apakah ada perbedaan yang signifikan dalam bandwidth yang dialokasikan?
+
+**Jawaban:**
+1. Topologi
+   ![alt text]()
+
+2. Kemudian saya melakukan config pada router sebagai berikut:
+   ```
+   Router>enable
+   Router#configure terminal
+   Enter configuration commands, one per line.  End with CNTL/Z.
+   Router(config)#interface f0/0
+   Router(config-if)#ip address 192.168.1.1 255.255.255.0
+   Router(config-if)#no shutdown
+   Router(config-if)#
+   Router(config-if)#interface f1/0
+   Router(config-if)#ip address 192.168.2.1 255.255.255.0
+   Router(config-if)#no shutdown
+   Router(config-if)#
+   Router(config-if)#access-list 10 permit 192.168.1.0 0.0.0.255
+   Router(config)#class-map match-any HIGH-PRIO
+   Router(config-cmap)#match access-group 10
+   Router(config-cmap)#exit
+   Router(config)#
+   Router(config)#policy-map QOS-POLICY
+   Router(config-pmap)#class HIGH-PRIO
+   Router(config-pmap-c)#priority 1000
+   Router(config-pmap-c)#exit
+   Router(config-pmap)#class class-default
+   Router(config-pmap-c)#fair-queue
+   Router(config-pmap-c)#exit
+   Router(config-pmap)#
+   Router(config-pmap)#interface f1/0
+   Router(config-if)#service-policy output QOS-POLICY
+   Router(config-if)#
+   *Oct 16 15:26:57.931: %LINK-3-UPDOWN: Interface FastEthernet0/0, changed state to up
+   *Oct 16 15:26:57.995: %LINK-3-UPDOWN: Interface FastEthernet1/0, changed state to up
+   *Oct 16 15:26:58.931: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+   *Oct 16 15:26:58.995: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0, changed state to up
+   ```
+3. Kemudian saya bagi jadi 2 percobaan:
+   Percobaan 1:
+   ```
+   Host 1: iperf3 -s
+   Host 2: iperf3 -c 192.168.1.2 -u -b 10M
+   ```
+
+   Percobaan 2:
+   ```
+   Host 1: iperf3 -c 192.168.2.2 -u -b 10M
+   Host 2: iperf3 -s
+   ```
+
+4. Dokumentasi Hasil Percobaan:
+
+    ![alt text]()
+    ![alt text]()
    
+
+5. Kesimpulan
+   **Jitter:**
+   Host 1 memiliki jitter yang awalnya kecil, namun meningkat tajam seiring dengan kenaikan bandwidth.
+   Host 2 memiliki jitter yang relatif lebih besar di awal, namun stabil di nilai yang lebih rendah untuk sebagian besar interval.
+
+   **Packet Loss:**
+   Host 1 menunjukkan packet loss yang lebih tinggi pada bandwidth besar, terutama setelah transfer data meningkat di interval ke-10.
+   Host 2 memiliki packet loss yang sangat besar pada awal pengujian dan tetap konsisten tinggi sepanjang pengujian.
+
+   **Bandwidth:**
+   Host 1 menunjukkan bandwidth yang rendah pada awal dan kemudian meningkat tajam.
+   Host 2 memiliki bandwidth yang lebih tinggi dan lebih stabil, namun kehilangan datagram yang tinggi mengindikasikan masalah besar pada pengiriman data.
+
    
