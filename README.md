@@ -274,7 +274,7 @@
 
 **Jawaban:**
 1. Topologi
-   ![alt text](images/topologi4.jpeg)
+   ![alt text](images/Topologi4.jpeg)
 
 2. Kemudian saya melakukan config pada router sebagai berikut:
    ```
@@ -325,8 +325,8 @@
 
 4. Dokumentasi Hasil Percobaan:
 
-    ![alt text](images/percobaan1.jpeg)
-    ![alt text](images/percobaan2.jpeg)
+    ![alt text](images/Percobaan1.jpeg)
+    ![alt text](images/Percobaan2.jpeg)
    
 
 5. Kesimpulan
