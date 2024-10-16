@@ -218,9 +218,10 @@
 
 **Jawaban**
 1. Topologi
+   
    ![image](https://github.com/user-attachments/assets/ee670e98-feb8-4c51-9df8-19128983c11f)
 
-2. Konfigurasi router untuk menerapkan ACL
+3. Konfigurasi router untuk menerapkan ACL
    ```
    R6#conf terminal
    Enter configuration commands, one per line.  End with CNTL/Z.
@@ -256,10 +257,10 @@
    R6(config-if)#ip access-group 101 in
    ```
 
-3. Wireshark menangkap jaringan
+4. Wireshark menangkap jaringan
    ![image](https://github.com/user-attachments/assets/65d05707-b142-4d34-b54f-97f2439cc5d3)
 
-4. Kesimpulan:
+5. Kesimpulan:
 
 ## Penerapan QoS dan Pemantauan Kinerja:
 **Deskripsi:** Perusahaan Anda ingin memastikan bahwa aplikasi penting mendapatkan bandwidth yang cukup melalui penerapan QoS (Quality of Service).
