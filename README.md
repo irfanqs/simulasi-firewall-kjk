@@ -342,4 +342,12 @@
    Host 1 menunjukkan bandwidth yang rendah pada awal dan kemudian meningkat tajam.
    Host 2 memiliki bandwidth yang lebih tinggi dan lebih stabil, namun kehilangan datagram yang tinggi mengindikasikan masalah besar pada pengiriman data.
 
-   
+## Simulasi Serangan dan Penanggulangan:
+
+**Deskripsi:** Anda ingin menguji ketahanan jaringan Anda terhadap serangan umum, seperti serangan DDoS, dengan menggunakan GNS3.
+
+**Tugas:**
+1. Buatlah topologi jaringan dengan router Cisco dan beberapa host di GNS3.
+2. Konfigurasikan firewall untuk mengizinkan akses normal tetapi membatasi jumlah koneksi yang dapat dibuat dari satu alamat IP dalam satu waktu.
+3. Gunakan alat simulasi serangan (misalnya, Hping3) untuk melakukan serangan DDoS pada salah satu host di jaringan.
+4. Amati bagaimana firewall menangani serangan tersebut dan catat hasilnya. Apa yang bisa Anda lakukan untuk meningkatkan pertahanan jaringan terhadap serangan DDoS?
