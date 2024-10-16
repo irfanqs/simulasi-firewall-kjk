@@ -97,7 +97,7 @@
 
 **Jawaban:**
 1. Topologi
-   ![alt text](
+   ![alt text](images/topolog.png.jpeg)
 
 2. Kemudian saya melakukan config pada kedua router dan pc:
    Router 1:
@@ -194,15 +194,15 @@
 
 3. Dokumentasi :
    Router 1:
-   ![alt text]()
-   ![alt text]()
-   ![alt text]()
-   ![alt text]()
+   ![alt text](images/Rt1 1.1.jpeg)
+   ![alt text](images/Rt1 1.2.jpeg)
+   ![alt text](images/Rt1 2.1.jpeg)
+   ![alt text](images/Rt1 2.2.jpeg)
 
    Router 2:
-   ![alt text]()
-   ![alt text]()
-   ![alt text]()
-   ![alt text]()
+   ![alt text](images/Rt2 1.1.jpeg)
+   ![alt text](images/Rt2 1.2.jpeg)
+   ![alt text](images/Rt2 2.1.jpeg)
+   ![alt text](images/Rt2 2.2.jpeg)
    
    
