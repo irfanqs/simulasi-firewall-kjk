@@ -98,3 +98,111 @@
 **Jawaban:**
 1. Topologi
    ![alt text](
+
+2. Kemudian saya melakukan config pada kedua router dan pc:
+   Router 1:
+
+   ```
+   Router>enable
+   Router#configure terminal
+   Enter configuration commands, one per line.  End with CNTL/Z.
+   Router(config)#
+   Router(config)#interface FastEthernet0/0
+   Router(config-if)#ip address 10.0.0.1 255.255.255.0
+   Router(config-if)#no shutdown
+   Router(config-if)#
+   Router(config-if)#interface FastEthernet0/1
+   Router(config-if)#ip address 192.168.1.1 255.255.255.0
+   Router(config-if)#no shutdown
+   Router(config-if)#
+   Router(config-if)#ip route 192.168.2.0 255.255.255.0 10.0.0.2
+   Router(config)#
+   Router(config)#crypto isakmp policy 10
+   Router(config-isakmp)# encryption aes
+   Router(config-isakmp)# hash sha
+   Router(config-isakmp)# authentication pre-share
+   Router(config-isakmp)# group 2
+   Router(config-isakmp)#exit
+   Router(config)#
+   Router(config)#crypto isakmp key YOUR_PRE_SHARED_KEY address 10.0.0.2
+   A pre-shared key for address mask 10.0.0.2 255.255.255.255 already exists!
+   Router(config)#
+   Router(config)#$c transform-set MY_TRANSFORM_SET esp-aes esp-sha-hmac
+   Router(cfg-crypto-trans)#crypto map MY_CRYPTO_MAP 10 ipsec-isakmp
+   Router(config-crypto-map)# set peer 10.0.0.2
+   Router(config-crypto-map)# set transform-set MY_TRANSFORM_SET
+   Router(config-crypto-map)# match address 100
+   Router(config-crypto-map)#exit
+   Router(config)#
+   Router(config)#$ 100 permit ip 192.168.1.0 0.0.0.255 192.168.2.0 0.0.0.255
+   Router(config)#interface FastEthernet0/1
+   Router(config-if)# crypto map MY_CRYPTO_MAP
+   ```
+   
+   Router 2:
+   
+   ```
+   Router>enable
+   Router#configure terminal
+   Enter configuration commands, one per line.  End with CNTL/Z.
+   Router(config)#
+   Router(config)#interface FastEthernet0/0
+   Router(config-if)#ip address 10.0.0.2 255.255.255.0
+   %Error opening tftp://255.255.255.255/ciscortr.cfg (Timed out)
+   Router(config-if)#no shutdown
+   Router(config-if)#
+   Router(config-if)#interface FastEthernet0/1
+   Router(config-if)#ip address 192.168.2.1 255.255.255.0
+   Router(config-if)#no shutdown
+   Router(config-if)#
+   Router(config-if)#ip route 192.168.1.0 255.255.255.0 10.0.0.1
+   Router(config)#
+   Router(config)#crypto isakmp policy 10
+   Router(config-isakmp)# encryption aes
+   Router(config-isakmp)# hash sha
+   Router(config-isakmp)# authentication pre-share
+   Router(config-isakmp)# group 2
+   Router(config-isakmp)#exit
+   Router(config)#
+   Router(config)#crypto isakmp key YOUR_PRE_SHARED_KEY address 10.0.0.1
+   Router(config)#
+   Router(config)#$c transform-set MY_TRANSFORM_SET esp-aes esp-sha-hmac
+   Router(cfg-crypto-trans)#crypto map MY_CRYPTO_MAP 10 ipsec-isakmp
+   Router(config-crypto-map)# set peer 10.0.0.1
+   Router(config-crypto-map)# set transform-set MY_TRANSFORM_SET
+   Router(config-crypto-map)# match address 100
+   Router(config-crypto-map)#exit
+   Router(config)#
+   Router(config)#$ 100 permit ip 192.168.2.0 0.0.0.255 192.168.1.0 0.0.0.255
+   Router(config)#interface FastEthernet0/1
+   Router(config-if)# crypto map MY_CRYPTO_MAP
+   ```
+
+   PC1:
+   ```
+   PC1> ip 192.168.1.2 255.255.255.0 192.168.1.1
+   Checking for duplicate address...
+   PC1 : 192.168.1.2 255.255.255.0 gateway 192.168.1.1
+   ```
+
+   PC2:
+   ```
+   PC2> ip 192.168.2.2 255.255.255.0 192.168.2.1
+   Checking for duplicate address...
+   PC2 : 192.168.2.2 255.255.255.0 gateway 192.168.2.1
+   ```
+
+3. Dokumentasi :
+   Router 1:
+   ![alt text]()
+   ![alt text]()
+   ![alt text]()
+   ![alt text]()
+
+   Router 2:
+   ![alt text]()
+   ![alt text]()
+   ![alt text]()
+   ![alt text]()
+   
+   
