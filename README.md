@@ -85,3 +85,16 @@
 3. Pengujian ping dari VPCS 1 ke VPCS 2 dan sebaliknya
    ![alt text](images/image-1.png)
    ![alt text](images/image-4.png)
+
+## Implementasi VPN Site-to-Site:
+**Deskripsi:** Perusahaan Anda ingin mengamankan komunikasi antara dua kantor yang terpisah dengan VPN site-to-site menggunakan router Cisco.
+
+**Tugas:**
+
+1. Buatlah dua topologi jaringan di GNS3, masing-masing untuk kantor A (192.168.1.0/24) dan kantor B (192.168.2.0/24), yang terhubung melalui Internet.
+2. Konfigurasikan VPN site-to-site menggunakan IPsec di router untuk mengamankan komunikasi antara kedua jaringan.
+3. Lakukan pengujian dengan melakukan ping dari host di kantor A ke host di kantor B. Dokumentasikan langkah-langkah konfigurasi dan hasil pengujian.
+
+**Jawaban:**
+1. Topologi
+   ![alt text](
